@@ -63,6 +63,7 @@ public class UsuarioService {
 				return Optional.empty();
 		}
 
+	
 	private String gerarToken(String usuario) {
 		return "Bearer " + jwtService.generateToken(usuario);
 	}
