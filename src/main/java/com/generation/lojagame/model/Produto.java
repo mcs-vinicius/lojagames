@@ -1,6 +1,7 @@
 package com.generation.lojagame.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -45,6 +46,10 @@ public class Produto {
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
 	private Categoria categoria;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+	private List<Usuario> usuario;
 
 	public Long getId() {
 		return id;
